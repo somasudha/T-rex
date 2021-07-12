@@ -148,7 +148,7 @@ function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(600,165,10,40);
     //obstacle.debug = true;
-     obstacle.x=camera.position.x+300
+    obstacle = createSprite(camera.position.x+200,170,20,20);
     obstacle.velocityX = -(6 + 3*score/100);
     
     //generate random obstacles
