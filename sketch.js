@@ -80,6 +80,10 @@
         if(keyDown("space") && trex.y >= 159) {
           trex.velocityY = -12;
         }
+          
+        if (keyDown("RIGHT_ARROW")) {
+            trex.x=trex.x+10; 
+        }
 
         trex.velocityY = trex.velocityY + 0.8
 
