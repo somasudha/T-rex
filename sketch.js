@@ -41,18 +41,17 @@
       trex.addAnimation("running", trex_running);
       trex.addAnimation("collided", trex_collided);
       trex.scale = 0.5;
+      trex.x=camera.position.x;
 
       ground = createSprite(200,180,400,20);
       ground.addImage("ground",groundImage);
-      ground.x = ground.width /2;
-      ground.x=camera.position.x;
-      ground.velocityX = -(6 + 3*score/100);
+      ground.x = ground.width  /2;
 
       gameOver = createSprite(300,100);
       gameOver.addImage(gameOverImg);
 
       restart = createSprite(300,140);
-      restart.addImage(restartImg);
+      restart.addImage(restartImg);            
 
       gameOver.scale = 0.5;
       restart.scale = 0.5;
