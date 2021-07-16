@@ -41,11 +41,11 @@
       trex.addAnimation("running", trex_running);
       trex.addAnimation("collided", trex_collided);
       trex.scale = 0.5;
-      camera.position.x=trex.x;
 
       ground = createSprite(200,180,400,20);
       ground.addImage("ground",groundImage);
       ground.x = ground.width  /2;
+      camera.position.x=ground.x;
 
       gameOver = createSprite(300,100);
       gameOver.addImage(gameOverImg);
