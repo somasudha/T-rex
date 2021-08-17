@@ -34,18 +34,18 @@
     }
 
     function setup() {
-       createCanvas(1000, 1000);
+      createCanvas(600, 200);
 
       trex = createSprite(50,180,20,50);
 
       trex.addAnimation("running", trex_running);
       trex.addAnimation("collided", trex_collided);
       trex.scale = 0.5;
-      camera.position.x = trex.x - 100;
 
       ground = createSprite(200,180,400,20);
       ground.addImage("ground",groundImage);
       ground.x = ground.width /2;
+      ground.x=camera.position.x;
       ground.velocityX = -(6 + 3*score/100);
 
       gameOver = createSprite(300,100);
@@ -80,10 +80,6 @@
 
         if(keyDown("space") && trex.y >= 159) {
           trex.velocityY = -12;
-        }
-          
-        if (keyDown("RIGHT_ARROW")) {
-            trex.x=trex.x+10; 
         }
 
         trex.velocityY = trex.velocityY + 0.8
@@ -150,8 +146,10 @@
 
     function spawnObstacles() {
       if(frameCount % 60 === 0) {
+        var obstacle = createSprite(600,165,10,40);
         //obstacle.debug = true;
-        var obstacle = createSprite(camera.position.x+200,170,20,20);
+        obstacle = createSprite(camera.position.x+200,170,20,20);
+        obstacle.velocityX = -(6 + 3*score/100);
 
         //generate random obstacles
         var rand = Math.round(random(1,6));
