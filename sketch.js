@@ -34,7 +34,7 @@
     }
 
     function setup() {
-      createCanvas(600, 200);
+      createCanvas(1000, 1000);
 
       trex = createSprite(50,180,20,50);
 
