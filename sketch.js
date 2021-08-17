@@ -36,7 +36,7 @@
     function setup() {
       createCanvas(1000, 1000);
 
-      trex = createSprite(50,180,20,50);
+      trex = createSprite(0,180,20,50);
 
       trex.addAnimation("running", trex_running);
       trex.addAnimation("collided", trex_collided);
